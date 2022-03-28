@@ -7,6 +7,6 @@ public class ServiceHandler implements RequestHandler<String, Object> {
     @Override
     public Object handleRequest(String s, Context context) {
         context.getLogger().log("Input: " + s);
-        return "Lambda Function is invoked...." + s;
+        return "Lambda Function is invoked1...." + s;
     }
 }
