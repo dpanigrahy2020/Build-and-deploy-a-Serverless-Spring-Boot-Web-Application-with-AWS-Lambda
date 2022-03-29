@@ -1,0 +1,12 @@
+version: 0.0
+Resources:
+  - myLambdaFunction:
+      Type: AWS::Lambda::Function
+      Properties:
+        Name: "My_SpringBoot_Lambda_function"
+        Alias: "LambdaVer1"
+        CurrentVersion: "2"
+        TargetVersion: "3"
+Hooks:
+  - BeforeAllowTraffic: "My_SpringBoot_Lambda_function"
+  - AfterAllowTraffic: "My_SpringBoot_Lambda_function"
